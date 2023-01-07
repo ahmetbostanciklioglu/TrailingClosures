@@ -3,7 +3,7 @@ Trailing Closures
 
 
 **Trailing closure syntax**
-
+```
 func trailingClosure(closure10: () -> Void) {
     print("==========")
     closure10()
@@ -32,3 +32,16 @@ func trailingFunc(argument trailingClosure: () -> Void) {
 trailingFunc {
     print("trailing closure")
 }
+```
+
+
+** Set closures as parameters and closures get parameter**
+```
+func paramClosure(closure: (String) -> Void) {
+    closure("parameter")
+}
+paramClosure { param in
+    print("it is a trailing closure with input \(param).")
+}
+```
+
